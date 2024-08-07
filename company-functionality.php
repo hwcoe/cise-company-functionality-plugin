@@ -129,6 +129,7 @@ Class CompanyDisplay {
 	public function wpse69204_excerpt( $post_id = null )
 	{
 		global $post;
+		$excerpt = "";
 		$current_post = $post_id ? get_post( $post_id ) : $post;
 		$imageArray  = get_field( 'company_logo' );
 		$imageAlt    = esc_attr($imageArray['alt']);
