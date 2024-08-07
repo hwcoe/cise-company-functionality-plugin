@@ -32,7 +32,7 @@ Class CompanyDisplay {
 	public function company_display_shortcode($atts) {
 
 		extract( shortcode_atts( array(
-			'posts_per_page' => '50',
+			'posts_per_page' => '-1',
 			'order' => 'ASC',
 			'orderby' => 'title',
 			'type'=>'type',	
@@ -48,14 +48,14 @@ Class CompanyDisplay {
 			'no_found_rows' => true,
 		);
 		
-		$dispCount  = (int) $posts_per_page;
-		if($dispCount==50){
-			$colmd = four;
-		}else if($dispCount=="4"){
-			$colmd = four; 
-		}else{
-			$colmd = four;
-		}
+		// $dispCount  = (int) $posts_per_page;
+		// if($dispCount==50){
+		// 	$colmd = four;
+		// }else if($dispCount=="4"){
+		// 	$colmd = four; 
+		// }else{
+		// 	$colmd = four;
+		// }
 		$query = new WP_Query( $args  );
 
 		$testimonials = '<div class="company-tab">'; //col-md-12
